@@ -1,37 +1,35 @@
-import React  from 'react';
-import logo from '../images/okuklu.png';
-import { FiChevronDown } from 'react-icons/fi';
+import React from "react";
+import logo from "../images/okuklu.png";
+import { FiChevronDown } from "react-icons/fi";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const showDropdownAbout = (e) => {
-    const aboutList = document.querySelector('.about-list');
+    const aboutList = document.querySelector(".about-list");
 
     e.preventDefault();
-    aboutList.classList.toggle('show-list');
+    aboutList.classList.toggle("show-list");
   };
 
   const showDropdownCareer = (e) => {
-    const careerList = document.querySelector('.career-list');
+    const careerList = document.querySelector(".career-list");
 
     e.preventDefault();
-    careerList.classList.toggle('show-list');
+    careerList.classList.toggle("show-list");
   };
 
-  const navItems = document.querySelectorAll('.nav-item');
+  const navItems = document.querySelectorAll(".nav-item");
 
   navItems.forEach((item) => {
-    item.addEventListener('click', () => {
-      
-    });
+    item.addEventListener("click", () => {});
   });
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark p-0">
-         <Link to="/" className="navbar-brand">
-          <img src={logo} alt="logo" className="img-fluid" />
-        </Link>
+      <Link to="/" className="navbar-brand">
+        <img src={logo} alt="logo" className="img-fluid" />
+      </Link>
       <div className="container text-light">
         <button
           className="navbar-toggler ms-auto"
@@ -55,32 +53,7 @@ const Navbar = () => {
               <Link to="/" className="nav-link" aria-current="page">
                 Məhsullar <FiChevronDown />
               </Link>
-              <ul className="product-list">
-                <li>
-                  <Link to="/about">Kafel-Metlax</Link>
-                </li>
-                <li>
-                  <Link to="/whyus">Keramoqranit</Link>
-                </li>
-                <li>
-                  <Link to="/managment">Laminat və Parket</Link>
-                </li>
-                <li>
-                  <Link to="/managment">Santexnika məhsulları</Link>
-                </li>
-                <li>
-                  <Link to="/managment">Divar kağızları</Link>
-                </li>
-                <li>
-                  <Link to="/managment">Qapılar</Link>
-                </li>
-                <li>
-                  <Link to="/managment">Mebellər</Link>
-                </li>
-                <li>
-                  <Link to="/managment">Çini qablar</Link>
-                </li>
-              </ul>
+              {/* change here */}
             </li>
             <li className="nav-item about-dropdown">
               <Link
@@ -113,7 +86,11 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item career-dropdown">
-              <Link to="/career" className="nav-link" onClick={showDropdownCareer}>
+              <Link
+                to="/career"
+                className="nav-link"
+                onClick={showDropdownCareer}
+              >
                 Karyera <FiChevronDown />
               </Link>
               <ul className="career-list">

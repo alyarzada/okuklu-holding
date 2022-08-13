@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { GrInstagram } from 'react-icons/gr';
-import { FiYoutube } from 'react-icons/fi';
-import { FaTiktok } from 'react-icons/fa';
+import React from "react";
+import { Link } from "react-router-dom";
+import { GrInstagram } from "react-icons/gr";
+import { FiYoutube } from "react-icons/fi";
+import { FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -22,21 +22,7 @@ const Footer = () => {
             <h6>Xırdalan filialı : Igdır residence binası</h6>
             <h6>Abşeron filialı : Abşeron Logistika mərkəzi</h6>
           </div>
-          <div className="col-lg-4">
-            <h4>Sosial Sebekeler</h4>
-            <hr />
-            <div className="d-flex gap-5 justify-content-center">
-              <a target='_blank' href="https://www.instagram.com/hanlipazarofficial/">
-                <GrInstagram size="1.4rem" title="instagram" color="white" />
-              </a>
-              <a href="https://www.youtube.com/channel/UCUFB08LIj9e5VX5xubrWtdA/featured">
-                <FiYoutube size="1.4rem" title="youtube" color="white" />
-              </a>
-              <Link to="/">
-                <FaTiktok size="1.4rem" title="tiktok" color="white" />
-              </Link>
-            </div>
-          </div>
+          {/* change here */}
         </div>
       </div>
     </section>
